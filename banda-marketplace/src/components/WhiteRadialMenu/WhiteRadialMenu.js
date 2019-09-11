@@ -1,7 +1,7 @@
 import React from 'react';
-import './RadialMenu.css';
+import './WhiteRadialMenu.css';
 
-function RadialMenu() {
+function WhiteRadialMenu() {
 
     const openSupportModal = () => {
         document.getElementById('modal-wrapper-support').style.display='block';
@@ -9,8 +9,9 @@ function RadialMenu() {
 
   return (
     <div className="radial-menu-outer">
+        <img id="decorative-top-bar" src={require("./assets/top-bar.png")}></img>
         <div id="container">
-            <img id="menuBacking" src={require("./assets/menu.png")}></img>
+            <img id="menuBacking" src={require("./assets/menu-white.png")}></img>
             <div id="corner"><a href="#"><i id="mainbtn"><img src={require("./assets/banda_b.png")}></img></i></a></div>
         </div>
         <div className='circle-container'>
@@ -23,4 +24,4 @@ function RadialMenu() {
   );
 }
 
-export default RadialMenu;
+export default WhiteRadialMenu;

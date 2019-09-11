@@ -1,7 +1,7 @@
 /* Radial Menu */
 
 .radialText{
-    color: white;
+    color: black;
 }
 
 .radialText:hover{
@@ -27,7 +27,7 @@
 
 #mainbtn {
     position:absolute;
-    top:30px;
+    top:20px;
     left:60px;
     z-index:5;
 }
@@ -71,7 +71,15 @@ transition: all 0.5s ease-out; 		z-index: 2;}
 -moz-transition: all 0.5s ease-out;
 transition: all 0.5s ease-out; 		z-index: 2;}
 
-.open.deg0 { transform: rotate(8deg) translate(11.5em) rotate(-8deg); }
-.open.deg30 { transform: rotate(27deg) translate(12.5em) rotate(-27deg); }
-.open.deg60 { transform: rotate(50deg) translate(12.5em) rotate(-50deg); }
-.open.deg90 { transform: rotate(80deg) translate(13em) rotate(-80deg);}
+.open.deg0 { transform: rotate(8deg) translate(8.5em) rotate(-8deg); }
+.open.deg30 { transform: rotate(27deg) translate(11.5em) rotate(-27deg); }
+.open.deg60 { transform: rotate(50deg) translate(12em) rotate(-50deg); }
+.open.deg90 { transform: rotate(75deg) translate(12.5em) rotate(-75deg);}
+
+#decorative-top-bar{
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    background: white;
+    z-index: 6;
+}
