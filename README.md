@@ -9,4 +9,4 @@ temp repo for banda's transition to react
 <li>npm start</li>
 <li>observe localhost:3000</li>
 </ul>
-<p style="color: red;">#happy time lads.</li>
+<p>happy time lads.</p>
