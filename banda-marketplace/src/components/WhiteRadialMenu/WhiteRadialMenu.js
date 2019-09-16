@@ -10,7 +10,7 @@ function WhiteRadialMenu() {
   return (
     <div className="radial-menu-outer">
         <img id="decorative-top-bar" src={require("./assets/top-bar.png")}></img>
-        <div id="container">
+        <div id="static-container">
             <img id="menuBacking" src={require("./assets/menu-white.png")}></img>
             <div id="corner"><a href="#"><i id="mainbtn"><img src={require("./assets/banda_b.png")}></img></i></a></div>
         </div>
