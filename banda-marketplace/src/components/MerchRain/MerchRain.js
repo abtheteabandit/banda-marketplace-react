@@ -9,7 +9,6 @@ function MerchRain(props) {
 
 
     const toggleSizeClasses = () => {
-        console.log(stepper);
         switch(stepper){
             case 0:
                 stepper++;
@@ -43,11 +42,13 @@ function MerchRain(props) {
         }
     }
 
+    var classArr = toggleSizeClasses();
+
     return (
         <div id="merch-rain-container">
             {
                 props.merch.map((item) => (
-                    <MerchRainDrop key={item.id} img={item.url} style={item.style} classArr={toggleSizeClasses()} updateLastLeft={props.updateLastLeft}></MerchRainDrop> 
+                    <MerchRainDrop key={item.id} img={item.url} style={item.style} classArr={classArr} updateLastLeft={props.updateLastLeft}></MerchRainDrop> 
                 ))
             }
         </div>

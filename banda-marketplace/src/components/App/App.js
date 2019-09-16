@@ -20,11 +20,66 @@ function App() {
     setMerch((prevState) => ({
       arr: prevState.arr.splice(id,1)
     }));
-  } 
+  };
+
+  const shuffle = (a) => {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+  };
 
   useEffect(() => {
       var counter = 0;
       var maxDrops = 8;
+      var imgArr = [
+        "cool.png",
+        "healthy.jpg",
+        "very.jpg",
+        "cool.png",
+        "fine.jpg",
+        "hydrate.jpg",
+        "nature.jpg",
+        "pant.jpg",
+        "sad.jpg",
+        "hydrate.jpg",
+        "very.jpg",
+        "hoodie-test.png",
+        "cool.png",
+        "healthy.jpg",
+        "very.jpg",
+        "cool.png",
+        "fine.jpg",
+        "hydrate.jpg",
+        "nature.jpg",
+        "pant.jpg",
+        "sad.jpg",
+        "hydrate.jpg",
+        "very.jpg",
+        "hoodie-test.png"
+      ];
+      var rollChance = Math.random()*10;
+      console.log("CHANCE ROLLED: ");
+      console.log("CHANCE ROLLED: ");
+      console.log("CHANCE ROLLED: ");
+      console.log("CHANCE ROLLED: ");
+      console.log("CHANCE ROLLED: ");
+      console.log("CHANCE ROLLED: ");
+      console.log("CHANCE ROLLED: ");
+      console.log("CHANCE ROLLED: ");
+      console.log("CHANCE ROLLED: ");
+      console.log("CHANCE ROLLED: ");
+      console.log("CHANCE ROLLED: ");
+      console.log(rollChance);
+
+      if(rollChance > 9){
+        imgArr.push("how.jpg");
+      }
+      imgArr = shuffle(imgArr);
       const interval = setInterval(() => {
         if(counter < maxDrops){
           var newId = counter++;
@@ -37,7 +92,7 @@ function App() {
             left: leftVal
           };
           var newObj = {
-            url: "./assets/hoodie-test.png",
+            url: "./assets/"+imgArr[counter],
             id: newId,
             style: style
           };
@@ -46,6 +101,7 @@ function App() {
           }));
         }
       },2400);
+      // },400);
       return () => clearInterval(interval);
   }, []);
 

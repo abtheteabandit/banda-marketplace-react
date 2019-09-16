@@ -11,6 +11,14 @@
     to {top: 100%;}
 }
 
+@keyframes wiggle{
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(0deg);}
+    40% { transform: rotate(5deg); }
+    60% { transform: rotate(-5deg) scale(1.065385); }
+   100% { transform: rotate(0deg);}
+}
+
 .merch-rain-drop-container-lg{
     position: absolute;
     margin: 0;
@@ -20,13 +28,20 @@
     grid-template-columns: auto;
     align-items: center;
     width: 241px;
-    animation-name: rainDropLg;
-    animation-duration: 10s;
+    animation: rainDropLg 10s, wiggle 4s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-out;
+    cursor: pointer;
+}
+
+.merch-rain-drop-container-lg:hover{
+    transform: scale(3.05385);    
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .merch-rain-drop-container-lg img{
+    object-fit: cover;
     z-index: 3;
 }
 
@@ -53,13 +68,19 @@
     grid-template-columns: auto;
     align-items: center;
     width: 193px;
-    animation-name: rainDropMd;
-    animation-duration: 10s;
+    animation: rainDropMd 10s, wiggle 3s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-out;
+    cursor: pointer;
+}
+
+.merch-rain-drop-container-md:hover{
+    transform: scale(3.05385);
+    transition-duration: .3s;
 }
 
 .merch-rain-drop-container-md img{
+    object-fit: cover;
     z-index: 3;
 }
 
@@ -67,6 +88,7 @@
     width: 193px;
     height: 42px;
 }
+
 
 .merch-drop-main-md{
     width: 140px;
@@ -86,14 +108,24 @@
     grid-template-columns: auto;
     align-items: center;
     width: 154px;
-    animation-name: rainDropSm;
-    animation-duration: 10s;
+    animation: rainDropSm 10s, wiggle 3s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-out;
+    cursor: pointer;
+}
+
+.merch-rain-drop-container-sm:hover{
+    transform: scale(3.05385);
+    transition-duration: .3s;
 }
 
 .merch-rain-drop-container-sm img{
+    object-fit: cover;
     z-index: 3;
+}
+
+.merch-rain-drop-container-sm img:hover{
+    z-index: 4;
 }
 
 .merch-drop-top-sm, .merch-drop-bot-sm{
@@ -106,7 +138,7 @@
     height: 112px;
     align-content: center;
     margin: 0 auto;
-    border-left: 6px solid black;
-    border-right: 6px solid black;
+    border-left: 4px solid black;
+    border-right: 4px solid black;
 }
 
