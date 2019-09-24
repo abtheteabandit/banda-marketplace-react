@@ -22,6 +22,11 @@ function MerchMain(props) {
                             <button>more to come...</button>
                         </div>
                     </div>
+                    <img id="blue-bars" src={require("./assets/blue-bars.png")} alt="blue"></img>
+                    <div id="search-container">
+                        <input id="search-input"></input>
+                        <img src={require("./assets/magnify.png")} alt="search" id="magnify"></img>
+                    </div>
                 </div>
             </div>
         </div>

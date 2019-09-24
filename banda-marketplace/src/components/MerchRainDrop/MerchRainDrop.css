@@ -3,11 +3,11 @@
     to {top: 100%;}
 }
 @keyframes rainDropMd {
-    from {top: -193px}
+    from {top: -241px}
     to {top: 100%;}
 }
 @keyframes rainDropSm {
-    from {top: -154px}
+    from {top: -241px}
     to {top: 100%;}
 }
 
@@ -28,14 +28,14 @@
     grid-template-columns: auto;
     align-items: center;
     width: 241px;
-    animation: rainDropLg 10s, wiggle 4s;
+    animation: rainDropLg 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-out;
+    animation-timing-function: linear;
     cursor: pointer;
 }
 
 .merch-rain-drop-container-lg:hover{
-    transform: scale(3.05385);    
+    transform: scale(1.05385);    
     transition-duration: .3s;
     transition-timing-function: ease-in-out;
 }
@@ -68,15 +68,16 @@
     grid-template-columns: auto;
     align-items: center;
     width: 193px;
-    animation: rainDropMd 10s, wiggle 3s;
+    animation: rainDropMd 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-out;
+    animation-timing-function: linear;
     cursor: pointer;
 }
 
 .merch-rain-drop-container-md:hover{
-    transform: scale(3.05385);
+    transform: scale(1.05385);    
     transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .merch-rain-drop-container-md img{
@@ -108,15 +109,16 @@
     grid-template-columns: auto;
     align-items: center;
     width: 154px;
-    animation: rainDropSm 10s, wiggle 3s;
+    animation: rainDropSm 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-out;
+    animation-timing-function: linear;
     cursor: pointer;
 }
 
 .merch-rain-drop-container-sm:hover{
-    transform: scale(3.05385);
+    transform: scale(1.05385);    
     transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .merch-rain-drop-container-sm img{
